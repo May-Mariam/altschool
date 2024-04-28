@@ -12,7 +12,7 @@ This project is a web application built using React and the GitHub API to fetch 
 
 --- Nested Routes : Uses nested routes to create a separate page for displaying details of a single repository when clicked.
 
---- Error Boundary : Implements an error boundary component to catch and gracefully handle errors in the application.
+--- Error Boundary : Implements an error boundary component to catch and gracefully handle errors in the application, implemented in the image-search-app.
 
 --- 404 Page : Includes a custom 404 page to handle routes that do not match any defined routes in the application.
 

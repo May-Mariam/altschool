@@ -18,7 +18,7 @@ const ProjectDetail = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `https://api.github.com/repos/May-Mariam/${id}`
+          "https://github.com/May-Mariam/image-search-app"
         );
         if (!response.ok) {
           navigate(`/404`);
