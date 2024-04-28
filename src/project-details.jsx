@@ -16,7 +16,7 @@ const ProjectDetails = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          "https://github.com/May-Mariam/image-search-app"
+          "https://github.com/altschool-frontend-v3/javascript-basics-datrippleM"
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
