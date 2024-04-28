@@ -18,7 +18,7 @@ const ProjectDetail = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          "https://github.com/May-Mariam/image-search-app"
+          `https://api.github.com/repos/May-Mariam/${id}`
         );
         if (!response.ok) {
           navigate(`/404`);
@@ -56,6 +56,7 @@ const ProjectDetail = () => {
       <div className="py-5" >
       {project.name}
       {project.full_name}
+    
     
       </div>
     </div>
