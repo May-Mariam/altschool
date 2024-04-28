@@ -23,6 +23,7 @@ const GithubProjects = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log(data)
         setProjects(data);
         setFilteredProjects(data);
       } catch (error) {
@@ -96,13 +97,13 @@ const GithubProjects = () => {
               <div className="col-md-4" key={project.id}>
                 <div
                   className="card h-100 border-0 shadow"
-                  onClick={() => handleProjectClick(project.id)}
+                  onClick={() => handleProjectClick(project.name)}
                 >
                   <div className="card-body">
                     <h5 className="card-title">{project.name}</h5>
                     <p className="card-text">{project.description}</p>
                     <a
-                      onClick={() => handleProjectClick(project.id)}
+                      onClick={() => handleProjectClick(project.name)}
                       target="_parent"
                       rel="noopener noreferrer"
                       className="btn btn-primary pointer"

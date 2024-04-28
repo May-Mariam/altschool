@@ -18,6 +18,8 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
@@ -33,4 +35,20 @@ body {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.error-container {
+  margin-top: 100px;
+  text-align: center;
+}
+.error-heading {
+  font-size: 72px;
+  color: #dc3545;
+}
+.error-message {
+  font-size: 24px;
+  color: #6c757d;
+}
+.error-back-link {
+  margin-top: 20px;
 }
