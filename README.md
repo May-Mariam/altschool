@@ -1,4 +1,4 @@
-# git GitHub Repositories Portfolio Web App
+# gGitHub Repositories Portfolio Web App
 
 This project is a web application built using React and the GitHub API to fetch and display a user's GitHub repositories portfolio. The app includes features such as pagination, search and filter functionality, error boundary, and a 404 page. Additionally, it implements good layout, UI, and designs, as well as accessibility techniques.
 
