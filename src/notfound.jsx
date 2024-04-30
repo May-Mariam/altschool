@@ -1,4 +1,6 @@
+
  const NotFound = () => {
+
   return(
     <div className="container text-center">
     <div className="row">
@@ -12,7 +14,6 @@
   </div>
   )
 
- }
+}
+ export default NotFound;
 
-
-export default NotFound;
