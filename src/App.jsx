@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<GithubProjects />} />
         <Route path="/project/:id" element={<ProjectDetails />} />
-        <Route path="/404" element={<NotFound/>} />
+        <Route path="*" element={<NotFound/>} />
 
       </Routes>
     </BrowserRouter>
