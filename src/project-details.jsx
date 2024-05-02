@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const ProjectDetail = () => {
+  const ProjectDetail = () => {
   const [project, setProject] = useState([]);
   const { id } = useParams();
   const [filteredProject, setFilteredProject] = useState([]);
@@ -52,15 +52,20 @@ const ProjectDetail = () => {
 
   
   return (
-    <div className="container">
-      <div className="py-5" >
-      {project.name}
-      {project.full_name}
+          <div className="py-5 mx-5">
+          <div className="repo-header">
+            <h2 className="repo-title">{project.name}</h2>
+            <p className="repo-fullname">{project.full_name}</p>
+          </div>
+          <div className="repo-details">
+            <p className="repo-description"> Repository Description: {project.description}</p>
+            <p className="repo-stars">Stars: {project.stargazers_count}</p>
+            <p className="repo-forks">Forks: {project.forks_count}</p>
+            <p className="repo-url"><a href={project.html_url} target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+          </div>
+        </div>
+      );
+    };
     
-    
-      </div>
-    </div>
-  );
-};
 
 export default ProjectDetail;
