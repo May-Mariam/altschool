@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useErrorBoundary } from "react-error-boundary";
 
 const GithubProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -11,6 +12,7 @@ const GithubProjects = () => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [projectsPerPage] = useState(3);
+  const { showBoundary } = useErrorBoundary();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -23,11 +25,12 @@ const GithubProjects = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data)
+        console.log(data);
         setProjects(data);
         setFilteredProjects(data);
       } catch (error) {
         setError(error.message);
+        showBoundary(error.message);
       } finally {
         setLoading(false);
       }
